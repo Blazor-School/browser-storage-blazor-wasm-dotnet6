@@ -1,0 +1,34 @@
+﻿@page "/browser-storage-demonstrate"
+@using CookieStorage.Utils
+@inject CookieStorageAccessor CookieStorageAccessor
+
+<h3>BrowserStorageDemonstrate</h3>
+<form>
+    <label class="form-label">
+        Key
+        <input class="form-control" type="text" @bind-value="Key" />
+    </label>
+    <label class="form-label">
+        Value
+        <input class="form-control" type="text" @bind-value="Value" />
+    </label>
+    <button class="btn btn-primary" type="button" @onclick="SetValueAsync">Set Value</button>
+</form>
+<div>Stored Value: @StoredValue</div>
+<button class="btn btn-primary" type="button" @onclick="GetValueAsync">Get Value</button>
+
+@code {
+    public string Key { get; set; } = "";
+    public string Value { get; set; } = "";
+    public string StoredValue { get; set; } = "";
+
+    public async Task SetValueAsync()
+    {
+        await CookieStorageAccessor.SetValueAsync(Key, Value);
+    }
+
+    public async Task GetValueAsync()
+    {
+        StoredValue = await CookieStorageAccessor.GetValueAsync<string>(Key);
+    }
+}

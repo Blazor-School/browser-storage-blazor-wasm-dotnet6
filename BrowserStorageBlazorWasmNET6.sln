@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocalStorage", "LocalStorag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SessionStorage", "SessionStorage\SessionStorage.csproj", "{D58D0656-3372-48FD-8FA7-645100CF5078}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CookieStorage", "CookieStorage\CookieStorage.csproj", "{C2664E8A-6A3A-4CA8-A7A2-767192C5ECB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryStorage", "MemoryStorage\MemoryStorage.csproj", "{67C0BEB1-E999-4565-91BC-1295AABBA719}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{D58D0656-3372-48FD-8FA7-645100CF5078}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D58D0656-3372-48FD-8FA7-645100CF5078}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D58D0656-3372-48FD-8FA7-645100CF5078}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2664E8A-6A3A-4CA8-A7A2-767192C5ECB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2664E8A-6A3A-4CA8-A7A2-767192C5ECB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2664E8A-6A3A-4CA8-A7A2-767192C5ECB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2664E8A-6A3A-4CA8-A7A2-767192C5ECB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67C0BEB1-E999-4565-91BC-1295AABBA719}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67C0BEB1-E999-4565-91BC-1295AABBA719}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67C0BEB1-E999-4565-91BC-1295AABBA719}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67C0BEB1-E999-4565-91BC-1295AABBA719}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
