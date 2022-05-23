@@ -5,11 +5,11 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocalStorage", "LocalStorage\LocalStorage.csproj", "{D731D132-AAF2-4ACD-A233-005805F987B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SessionStorage", "SessionStorage\SessionStorage.csproj", "{D58D0656-3372-48FD-8FA7-645100CF5078}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SessionStorage", "SessionStorage\SessionStorage.csproj", "{D58D0656-3372-48FD-8FA7-645100CF5078}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CookieStorage", "CookieStorage\CookieStorage.csproj", "{C2664E8A-6A3A-4CA8-A7A2-767192C5ECB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CookieStorage", "CookieStorage\CookieStorage.csproj", "{C2664E8A-6A3A-4CA8-A7A2-767192C5ECB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryStorage", "MemoryStorage\MemoryStorage.csproj", "{67C0BEB1-E999-4565-91BC-1295AABBA719}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryStorage", "MemoryStorage\MemoryStorage.csproj", "{67C0BEB1-E999-4565-91BC-1295AABBA719}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

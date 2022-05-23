@@ -1,0 +1,53 @@
+﻿@page "/browser-storage-demonstrate"
+@using MemoryStorage.Utils
+@inject MemoryStorageUtility MemoryStorageUtility
+
+<h3>BrowserStorageDemonstrate</h3>
+<form>
+    <label class="form-label">
+        Key
+        <input class="form-control" type="text" @bind-value="Key" />
+    </label>
+    <label class="form-label">
+        Value
+        <input class="form-control" type="text" @bind-value="Value" />
+    </label>
+    <button class="btn btn-primary" type="button" @onclick="SetValue">Set Value</button>
+</form>
+<div>Stored Value: @StoredValue</div>
+<button class="btn btn-primary" type="button" @onclick="GetValue">Get Value</button>
+<button class="btn btn-primary" type="button" @onclick="Remove">Remove Value</button>
+<button class="btn btn-primary" type="button" @onclick="ClearAll">Clear All</button>
+
+@code {
+    public string Key { get; set; } = "";
+    public string Value { get; set; } = "";
+    public string StoredValue { get; set; } = "";
+
+    public void SetValue()
+    {
+        MemoryStorageUtility.Storage.Add(Key, Value);
+    }
+
+    public void GetValue()
+    {
+        if (MemoryStorageUtility.Storage.TryGetValue(Key, out var value))
+        {
+            StoredValue = value.ToString()!;
+        }
+        else
+        {
+            StoredValue = "";
+        }
+    }
+
+    public void Remove()
+    {
+        MemoryStorageUtility.Storage.Remove(Key);
+    }
+
+    public void ClearAll()
+    {
+        MemoryStorageUtility.Storage.Clear();
+    }
+}
