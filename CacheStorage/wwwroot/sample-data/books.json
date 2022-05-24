@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Blazor Server .NET 6 Fundamentals",
+        "publisher": "Blazor School"
+    },
+    {
+        "name": "Blazor WebAssembly .NET 6 Fundamentals",
+        "publisher": "Blazor School"
+    }
+]
