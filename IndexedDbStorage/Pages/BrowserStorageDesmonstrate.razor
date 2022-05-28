@@ -1,0 +1,38 @@
+﻿@page "/browser-storage-demonstrate"
+@using IndexedDbStorage.Utils
+@using System.Text.Json
+@inject IndexedDbAccessor IndexedDbAccessor
+
+<h3>BrowserStorageDemonstrate</h3>
+<form>
+    <label class="form-label">
+        Book ID:
+        <input class="form-control" type="text" @bind-value="BookId" />
+    </label>
+    <label class="form-label">
+        Book Name:
+        <input class="form-control" type="text" @bind-value="BookName" />
+    </label>
+    <button class="btn btn-primary" type="button" @onclick="SetValueAsync">Set Value</button>
+</form>
+<div>Stored Value: @StoredValue</div>
+<button class="btn btn-primary" type="button" @onclick="GetValueAsync">Get Value</button>
+
+@code {
+    public string BookId { get; set; } = "";
+    public string BookName { get; set; } = "";
+    public string StoredValue { get; set; } = "";
+
+    protected override async Task OnInitializedAsync() => await IndexedDbAccessor.InitializeAsync();
+
+    public async Task SetValueAsync()
+    {
+        await IndexedDbAccessor.SetValueAsync("books", new { Id = 1, Name = BookName });
+    }
+
+    public async Task GetValueAsync()
+    {
+        JsonDocument storedBook = await IndexedDbAccessor.GetValueAsync<JsonDocument>("books", Convert.ToInt32(BookId));
+        StoredValue = storedBook.RootElement.GetProperty("name").GetString() ?? "";
+    }
+}

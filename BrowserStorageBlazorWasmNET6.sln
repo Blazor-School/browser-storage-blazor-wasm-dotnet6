@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryStorage", "MemoryStor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacheStorage", "CacheStorage\CacheStorage.csproj", "{5D01209E-227B-4574-BEBF-0E691E7DD2C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndexedDbStorage", "IndexedDbStorage\IndexedDbStorage.csproj", "{F72A9F86-D3EC-4CB4-B607-64FF34F0FD43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{5D01209E-227B-4574-BEBF-0E691E7DD2C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D01209E-227B-4574-BEBF-0E691E7DD2C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D01209E-227B-4574-BEBF-0E691E7DD2C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F72A9F86-D3EC-4CB4-B607-64FF34F0FD43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F72A9F86-D3EC-4CB4-B607-64FF34F0FD43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F72A9F86-D3EC-4CB4-B607-64FF34F0FD43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F72A9F86-D3EC-4CB4-B607-64FF34F0FD43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
