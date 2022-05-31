@@ -27,7 +27,7 @@
 
     public async Task SetValueAsync()
     {
-        await IndexedDbAccessor.SetValueAsync("books", new { Id = 1, Name = BookName });
+        await IndexedDbAccessor.SetValueAsync("books", new { Id = Convert.ToInt32(BookId), Name = BookName });
     }
 
     public async Task GetValueAsync()
