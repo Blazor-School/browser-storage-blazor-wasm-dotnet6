@@ -2,7 +2,7 @@
 
 namespace IndexedDbStorage.Utils;
 
-public class IndexedDbAccessor
+public class IndexedDbAccessor : IAsyncDisposable
 {
     private Lazy<IJSObjectReference> _accessorJsRef = new();
     private readonly IJSRuntime _jsRuntime;
