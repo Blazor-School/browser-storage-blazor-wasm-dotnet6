@@ -39,7 +39,6 @@ export async function get(collectionName, id)
     });
 
     let result = await request;
-    console.info(result);
 
     return result;
 }

@@ -23,8 +23,6 @@
     public string BookName { get; set; } = "";
     public string StoredValue { get; set; } = "";
 
-    protected override async Task OnInitializedAsync() => await IndexedDbAccessor.InitializeAsync();
-
     public async Task SetValueAsync()
     {
         await IndexedDbAccessor.SetValueAsync("books", new { Id = Convert.ToInt32(BookId), Name = BookName });
