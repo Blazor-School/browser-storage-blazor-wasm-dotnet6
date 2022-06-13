@@ -2,7 +2,7 @@
 
 namespace SessionStorage.Utils;
 
-public class SessionStorageAccessor
+public class SessionStorageAccessor : IAsyncDisposable
 {
     private Lazy<IJSObjectReference> _accessorJsRef = new();
     private readonly IJSRuntime _jsRuntime;
