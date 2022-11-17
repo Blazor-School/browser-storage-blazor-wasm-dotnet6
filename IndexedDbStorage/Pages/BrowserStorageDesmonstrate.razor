@@ -7,7 +7,7 @@
 <form>
     <label class="form-label">
         Book ID:
-        <input class="form-control" type="text" @bind-value="BookId" />
+        <input class="form-control" type="number" @bind-value="BookId" />
     </label>
     <label class="form-label">
         Book Name:
@@ -19,18 +19,18 @@
 <button class="btn btn-primary" type="button" @onclick="GetValueAsync">Get Value</button>
 
 @code {
-    public string BookId { get; set; } = "";
+    public int BookId { get; set; }
     public string BookName { get; set; } = "";
     public string StoredValue { get; set; } = "";
 
     public async Task SetValueAsync()
     {
-        await IndexedDbAccessor.SetValueAsync("books", new { Id = Convert.ToInt32(BookId), Name = BookName });
+        await IndexedDbAccessor.SetValueAsync("books", new { Id = BookId, Name = BookName });
     }
 
     public async Task GetValueAsync()
     {
-        JsonDocument storedBook = await IndexedDbAccessor.GetValueAsync<JsonDocument>("books", Convert.ToInt32(BookId));
-        StoredValue = storedBook.RootElement.GetProperty("name").GetString() ?? "";
+        JsonDocument storedBook = await IndexedDbAccessor.GetValueAsync<JsonDocument>("books", BookId);
+        StoredValue = storedBook?.RootElement.GetProperty("name").GetString() ?? "Not found!";
     }
 }
