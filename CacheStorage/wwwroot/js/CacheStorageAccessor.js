@@ -34,9 +34,9 @@ export async function removeAll()
     let blazorSchoolCache = await openCacheStorage();
     let requests = await blazorSchoolCache.keys();
 
-    for (let request in requests)
+    for (let i = 0; i < requests.length; i++)
     {
-        await blazorSchoolCache.delete(request);
+        await blazorSchoolCache.delete(requests[i]);
     }
 }
 
